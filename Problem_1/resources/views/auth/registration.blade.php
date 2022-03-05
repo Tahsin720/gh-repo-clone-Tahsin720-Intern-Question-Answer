@@ -10,13 +10,13 @@
     
     <!--Fontawesome CDN-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="ainactivenymous">
-    <title>Signup</title>
+    <title>Register</title>
 </head>
 <body>
     <style>
         fieldset {
-            borinr: thin solid #ccc; 
-            borinr-radius: 4px;
+            border: thin solid #ccc; 
+            border-radius: 4px;
             padding: 20px;
             padding-left: 40px;
             background: #fbfbfb;
@@ -58,48 +58,54 @@
                     <fieldset><legend class="text-center">Valid information is required to register. <span class="req"><small> required *</small></span></legend>
                     
                     <div class="form-group">
-                        <label for="username"><span class="req">* </span> User name </label> 
+                        <label for="username"><font color =red>*</font> User name </label> 
                             <input class="form-control" type="text" id = "user" name = "user" autocomplete="off" required>
                             <div class = "alert" id="errUser"></div>  
                     </div>
 
                     <div class="form-group">
-                        <label for="email"><span class="req">* </span> Email Address: </label> 
-                            <input class="form-control" required type="text" id = "email" name="email" />   
+                        <label for="email"><font color =red>*</font> Email Address: </label> 
+                            <input class="form-control" required type="text" id = "email" name="email" required>   
                                 <div class = "alert" id="errEmail"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="password"><span class="req">* </span> Password: </label><br>
-                        <input type = "Password" id = "password" name = "password" placeholinr="Enter Password" autocomplete="off" required>
+                        <label for="password"><font color =red>*</font> Password: </label><br>
+                        <input type = "Password" id = "password" name = "password" placeholder="Enter Password" autocomplete="off" required>
                         <div class = "alert" id="errPass"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="date_of_birth"><span class="req">* </span> Date of birth: </label> 
-                            <input class="form-control" type="text" id = "city" name = "city" placeholinr="hyphen or single quote OK" required />  
+                        <label for="date_of_birth"><font color =red>*</font> Date of Birth: </label> 
+                            <input class="form-control" type="date" id = "date_of_birth" name = "date_of_birth" placeholder="hyphen or single quote OK" required />  
                                 <div class = "alert" id="errdate"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="city"><span class="req">* </span> City: </label> 
+                        <label for="city"><font color =red>*</font> City: </label> 
                             <input class="form-control" type="text" id = "city" name = "city" placeholinr="hyphen or single quote OK" required />  
                                 <div class = "alert" id="errcity"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="country"><span class="req">* </span> Country: </label> 
+                        <label for="country"><font color =red>*</font> Country: </label> 
                             <input class="form-control" type="text" id = "country" name = "country" placeholinr="hyphen or single quote OK" required />  
                                 <div class = "alert" id="errCountry"></div>
                     </div>
 
-                    <p>Active or Inactive?<font color =red>*</font></p>
-                    <input type="radio" id="active" name="IsDonated" value="active" required>
-                        <label for="active">Active</label><br>
-                    
-                    <input type="radio" id="inactive" name="IsDonated" value="inactive" required>
-                        <label for="inactive">Inactive</label><br>
-
+                    <label for="Active or Inactive?"><font color =red>*</font> Active or Inactive? </label>  
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="active" name="status" value="Active" required>
+                        <label class="form-check-label" for="exampleRadios1">
+                        Active
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="inactive" name="status" value="Inactive" required>
+                        <label class="form-check-label" for="exampleRadios2">
+                        Inactive
+                        </label>
+                    </div>
                     <br>
                     <div class="form-group">
                         <input type = "submit" name = "" value = "Register">

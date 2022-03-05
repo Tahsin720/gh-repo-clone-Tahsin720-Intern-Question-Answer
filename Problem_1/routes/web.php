@@ -13,9 +13,9 @@ use App\Http\Controllers\Curd_operation;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/registration', [Curd_operation::class, 'registration']);
-Route::post('/register_user', [UserAuthController::class, 'registerUser'])->name('register_user');
+Route::get('/', [Curd_operation::class, 'usertable']);
+Route::get('registration/', [Curd_operation::class, 'registration']);
+Route::post('/register_user', [Curd_operation::class, 'registerUser'])->name('register_user');
+Route::post('/edit_page', [Curd_operation::class, 'editpage'])->name('edit_page');
+Route::post('/edit_user', [Curd_operation::class, 'editUser'])->name('edit_user');
+Route::post('/delete_func', [Curd_operation::class, 'deletefunc'])->name('delete_func');
